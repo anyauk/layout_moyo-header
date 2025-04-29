@@ -65,7 +65,7 @@ body {
   transition: color 0.2s ease;
 }
 
-/* 🖼️ Спан всередині посилання */
+/* Спан всередині посилання */
 .nav__link span {
   position: relative;
   display: inline-block;
@@ -76,21 +76,15 @@ body {
   color: var(--blue);
 }
 
-/* Створення псевдоелементу для лінії при наведенні */
-.nav__link span::after {
+/* тонка лінія при наведенні */
+.nav__link:hover span::after {
   content: '';
   position: absolute;
-  left: 0;
   bottom: 1px;
-  width: 0;
+  left: 0;
+  width: 100%;
   height: 2px;
   background-color: var(--blue);
-  transition: none;
-}
-
-/* Лінія при наведенні */
-.nav__link:hover span::after {
-  width: 100%;
 }
 
 /* LAPTOPS & COMPUTERS стає синім при наведенні */
